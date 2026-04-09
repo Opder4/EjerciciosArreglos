@@ -36,7 +36,7 @@ for (int i = 0; i < numeros.Length; i++)
     Console.Clear();
 }
 
-Console.WriteLine("Ingrese la posición a cambiar su valor: ");
+Console.WriteLine($"Ingrese la posición a cambiar su valor");
 Console.WriteLine();
 
 while (!int.TryParse(Console.ReadLine(), out posicion) || posicion<0)
