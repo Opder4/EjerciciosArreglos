@@ -1,5 +1,5 @@
 ﻿int cantidad = 0;
-int contadorsimpares = 0;
+double numerobuscar = 0;
 
 Console.WriteLine("Ingrese cuantos números quiere ingresar: ");
 Console.WriteLine();
@@ -34,15 +34,35 @@ for (int i = 0; i < numeros.Length; i++)
     Console.Clear();
 }
 
+Console.WriteLine("Ingrese el número que quiere buscar: ");
+Console.WriteLine();
+while (!double.TryParse(Console.ReadLine(), out numerobuscar))
+{
+    Console.WriteLine("");
+    Console.WriteLine("Dato no válido");
+    Console.WriteLine();
+}
+
+Console.WriteLine();
+Console.WriteLine("Presione ENTER para continuar");
+Console.WriteLine("");
+Console.ReadLine();
+Console.Clear();
+
 for (int i = 0; i < numeros.Length; i++)
 {
-    if (numeros[i] % 2 != 0)
+    if (numeros[i]==numerobuscar)
     {
-        contadorsimpares++;
+        Console.WriteLine($"El número {numerobuscar} se encuentra en la posición {i}");
+        Console.WriteLine();
+    }
+    else
+    {
+
     }
 }
-Console.WriteLine();
-Console.WriteLine($"Hay {contadorsimpares} números impares");
+
+    
 
 
 
