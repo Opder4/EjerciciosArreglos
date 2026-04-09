@@ -2,7 +2,7 @@
 
 Console.WriteLine("Ingrese cuantos números quiere ingresar: ");
 Console.WriteLine();
-while (!int.TryParse(Console.ReadLine(), out cantidad) || cantidad<=0)
+while (!int.TryParse(Console.ReadLine(), out cantidad) || cantidad <= 0)
 {
     Console.WriteLine();
     Console.WriteLine("Dato no válido");
@@ -18,7 +18,7 @@ double[] numeros = new double[cantidad];
 
 for (int i = 0; i < numeros.Length; i++)
 {
-    Console.WriteLine($"Ingrese el {i+1}° números");
+    Console.WriteLine($"Ingrese el {i + 1}° números");
     Console.WriteLine();
     while (!double.TryParse(Console.ReadLine(), out numeros[i]))
     {
@@ -33,9 +33,9 @@ for (int i = 0; i < numeros.Length; i++)
     Console.Clear();
 }
 
-Console.WriteLine("Los números ingresados son: ");
+Console.WriteLine("Los números ingresados de forma inversa son: ");
 Console.WriteLine();
-for (int i = 0;i < numeros.Length;i++)
+for (int i = numeros.Length-1; i>=0; i--)
 {
     Console.WriteLine($"{numeros[i]}");
     Console.WriteLine();
